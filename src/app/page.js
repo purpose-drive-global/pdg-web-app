@@ -1,12 +1,15 @@
-import Image from "next/image";
 import Footer from "./components/footer";
+import Header from "./components/Header.jsx"
+import Hero from "./components/Hero"
 import Upcomingevents from "./components/upcomingevents";
 
 export default function Home() {
   return (
-    <>
-    <Upcomingevents />
+    <section className="">
+      <Header />
+      <Hero/>
+      <Upcomingevents />
       <Footer />
-    </>
+    </section>
   );
 }
