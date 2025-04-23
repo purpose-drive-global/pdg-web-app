@@ -1,5 +1,10 @@
 'use client'
 
+'use client'
+
+import { Menu, X } from 'lucide-react';
+import { useState } from 'react';
+
 const navItems = [
     {
         name: 'Home'
@@ -13,11 +18,7 @@ const navItems = [
     {
         name: 'Blog'
     },
-]
-
-import { Menu, X } from 'lucide-react';
-
-import { useState } from 'react';
+];
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
