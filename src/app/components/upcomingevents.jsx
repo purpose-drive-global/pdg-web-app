@@ -55,12 +55,12 @@ const Upcomingevents = () => {
   return (
     <div className='mb-5'>
       <div>
-        <img/>
+        {/* <img/> */}
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 justify-center items-center p-5'>
         {events ? 
-       events.map((event, index)=>
-        <div key={index} className='flex flex-col justify-end relative '>
-        <img src={event.pic} className='mb-72' />
+       events.map((event)=>
+        <div key={event.Id} className='flex flex-col justify-end relative '>
+        <img src={event.pic} alt={`${event.title} event`} className='mb-72' />
         <div className='bg-white w-[70%] ml-1 border-[0.5px] absolute drop-shadow-md p-5 pb-7'>
         <h3 className='text-[28px] font-semibold'>{event.title}</h3>
             <p className=' font-normal text-[18px] pt-4 pb-6 h-[200]'>{event.desc}</p>
