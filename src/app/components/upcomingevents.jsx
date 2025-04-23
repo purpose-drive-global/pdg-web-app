@@ -47,7 +47,7 @@ const Upcomingevents = () => {
         },
         {
             Id: 8,
-            title:"Leadership Sories",
+            title:"Leadership Soiree",
             desc:"Leadership Soiree is an end of year party where we relax and talk about the impact PDG has made.",
             pic: "/assets/6.png"
         }
