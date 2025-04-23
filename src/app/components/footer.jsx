@@ -6,11 +6,11 @@ const Footer = () => {
     <div className='bg-[#0E0E0D] pb-5 text-white'>
         <div className='flex flex-col md:flex-row justify-evenly md:justify-between text-white w-full p-5'>
       <div className='w-full md:w-[60%]'>
-        <img src="/assets/pdglogo.png" alt='pdg logo'/>
+        <img src="/assets/pdglogo.png" alt='Purpose-Drive Global logo' />
       </div>
       <div className='w-full md:w-[60%] justify-center'>
         <h4 className='text-[#FFBF00] font-medium'>Talk to Us</h4>
-        <img src="/assets/talk.png" alt='talk logo' />
+        <img src="/assets/talk.png" alt='Talk to us illustration' />
       </div>
       <div className='w-full md:w-[60%]'>
         <h1 className='text-[#FFBF00] font-medium'>Pages</h1>
