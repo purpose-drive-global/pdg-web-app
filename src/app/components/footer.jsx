@@ -45,7 +45,7 @@ const Footer = () => {
    <p className='text-[#FFBF00] text-[12px] py-2'>Get a Newsletter from us</p>
    <div className='w-[95%]'>
    <div className='flex bg-white rounded-2xl'>
-   <input className='rounded-xl w-full pl-4' placeholder='Enter your  email here' />
+   <input className='rounded-xl w-full pl-4' placeholder='Enter your email here' />
    <div className='w-[40%] flex justify-center items-center'><div className='bg-[#FFBF00] w-full justify-center text-center rounded-2xl p-2'>Sign Up</div></div>
    </div>
    </div>
