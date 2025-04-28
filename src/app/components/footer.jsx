@@ -1,64 +1,165 @@
-import React from 'react'
+'use client'
+
 import { Icon } from '@iconify/react'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const Footer = () => {
+  const fadeInUpVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 }
+  }
+  
   return (
-    <div className='bg-[#0E0E0D] pb-5 text-white'>
-        <div className='flex flex-col md:flex-row justify-evenly md:justify-between text-white w-full p-5'>
-      <div className='w-full md:w-[60%]'>
-        <img src="/assets/pdglogo.png" alt='Purpose-Drive Global logo' />
+    <footer className="bg-[#0E0E0D] py-10 px-6 md:px-12 text-white">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 w-full">
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInUpVariants}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex flex-col items-start"
+        >
+          <Image
+            src="/assets/pdglogo.png"
+            alt="Purpose-Driven Global logo"
+            width={150}
+            height={100}
+            className="w-24 md:w-32"
+          />
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInUpVariants}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          className="flex flex-col items-start gap-4"
+        >
+          <h4 className="text-[#FFBF00] text-2xl font-semibold">Talk to Us</h4>
+          <Image
+            src="/assets/talk.png"
+            alt="Talk to Us illustration"
+            width={100}
+            height={80}
+            className="w-20 md:w-24"
+          />
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInUpVariants}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          className="flex flex-col gap-5"
+        >
+          <h1 className="text-[#FFBF00] text-2xl font-semibold">Pages</h1>
+          <ul className="flex flex-col gap-3">
+            <li>Home</li>
+            <li>About Us</li>
+            <li className="flex items-center justify-between">
+              Initiatives
+              <Icon icon="iconamoon:arrow-down-2-light" width="20" height="20" />
+            </li>
+            <li>Blog</li>
+          </ul>
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInUpVariants}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+          className="flex flex-col gap-5"
+        >
+          <h1 className="text-[#FFBF00] text-2xl font-semibold">Follow Us</h1>
+          <ul className="flex flex-col gap-3">
+            {[
+              { icon: 'mage:facebook', handle: '@purposedriveglobal' },
+              { icon: 'mingcute:linkedin-line', handle: '@purposedriveglobal' },
+              { icon: 'uim:google', handle: '@purposedriveglobal' },
+              { icon: 'prime:twitter', handle: '@purposedriveglobal' },
+            ].map((social, idx) => (
+              <li key={idx} className="flex items-center gap-2 text-sm">
+                <span className="bg-white p-1 rounded-full">
+                  <Icon icon={social.icon} width="20" height="20" className="text-[#FFBF00]" />
+                </span>
+                {social.handle}
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInUpVariants}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+          className="flex flex-col gap-6 lg:col-span-2"
+        >
+          <h1 className="text-[#FFBF00] text-2xl font-semibold">About Us</h1>
+          <p className="text-sm leading-relaxed">
+            Our Vision Fuels 2030. Our Dreams Build 2050. The journey from 2023 to 2030 is a crucial Launchpad towards Pan-African leadership.
+          </p>
+          <p className="text-sm leading-relaxed">
+            Our Projects and Initiatives are your expedition into a future where impact reverberates across continents.
+          </p>
+
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-2">
+              <Icon icon="ion:call" width="20" height="20" className="text-[#FFBF00]" />
+              +234 912 645 7283
+            </div>
+            <div className="flex items-center gap-2">
+              <Icon icon="material-symbols-light:mail" width="20" height="20" className="text-[#FFBF00]" />
+              hello@genzsummit.africa
+            </div>
+          </div>
+
+          <div className="w-full relative">
+            <div className="flex items-center bg-white rounded-2xl overflow-hidden">
+              <input
+                className="rounded-l-2xl w-full pl-4 h-12 text-black py-2 focus:outline-none"
+                placeholder="Enter your email here"
+              />
+              <button className="flex items-center justify-center gap-2 h-12 bg-[#FFBF00] text-white font-semibold px-6 py-2 rounded-r-2xl hover:bg-yellow-400 transition-all whitespace-nowrap">
+                Sign Up
+                <span className="transform rotate-[-45deg]">
+                  <Icon icon="mdi:arrow-right" width="20" height="20" color="white" />
+                </span>
+              </button>
+            </div>
+          </div>
+        </motion.div>
       </div>
-      <div className='w-full md:w-[60%] justify-center'>
-        <h4 className='text-[#FFBF00] font-medium'>Talk to Us</h4>
-        <img src="/assets/talk.png" alt='Talk to us illustration' />
-      </div>
-      <div className='w-full md:w-[60%]'>
-        <h1 className='text-[#FFBF00] font-medium'>Pages</h1>
-        <ul className='flex flex-col gap-4 pt-3'>
-            <li className='text-[18px]'>Home</li>
-            <li className='text-[18px]'>About Us</li>
-            <li className='text-[18px] gap-5 flex items-center'>Initiatives<Icon icon="iconamoon:arrow-down-2-light" width="20" height="20" style={{}} /></li>
-            <li className='text-[18px]'>Blog</li>
-        </ul>
-      </div>
-      <div className='w-full md:w-[60%]'>
-        <h1 className='text-[#FFBF00] font-medium'>Follow Us</h1>
-        <ul className='flex flex-col gap-5 pt-3'>
-        <li className='text-[12px] flex gap-1 items-center'>
-        <span className='rounded-full bg-white p-1'><Icon icon="mage:facebook" width="20" height="20" style={{color: '#FFBF00'}} /></span>@purposedriveglobal</li>
-        <li className='text-[12px] flex gap-1 items-center'>
-        <span className='rounded-full bg-white p-1'><Icon icon="mingcute:linkedin-line" width="20" height="20" style={{color: '#FFBF00'}} /></span>@purposedriveglobal</li>
-        <li className='text-[12px] flex gap-1 items-center'>
-        <span className='rounded-full bg-white p-1'><Icon icon="uim:google" width="20" height="20" style={{color: '#FFBF00'}} /></span>@purposedriveglobal</li>
-        <li className='text-[12px] flex gap-1 items-center'>
-        <span className='rounded-full bg-white p-1'><Icon icon="prime:twitter" width="20" height="20" style={{color: '#FFBF00'}} /></span>@purposedriveglobal</li>
-        </ul>
-      </div>
-      <div className='w-full'>
-      <h1 className='text-[#FFBF00] font-medium'>About Us</h1>
-      <p className='text-[16px] pt-3'>Our Vision Fuels 2030. Our Dreams Build 2050. The journey from 2023 to 2030, is a crucial Launchpad towards the Pan-African leadership that we will fully manifest in 2050.</p>
-      <p className='text-[16px] pt-4'>Our Projects and Initiatives are your expedition into a future where impact reverberates across continents. Step onto this road to 2030 with Purpose-Drive Global. Together, we will not only traverse this decade; we’ll build the legacy that defines 2050.</p>
-   <ul className='py-2 flex flex-col gap-2'>
-    <li><span className='flex gap-1'><Icon icon="ion:call" width="20" height="20" style={{color: '#FFBF00'}} />+234 912 645 7283</span></li>
-    <li><span className='flex gap-1'><Icon icon="material-symbols-light:mail" width="20" height="20" style={{color: '#FFBF00'}} />hello@genzsummit.africa</span></li>
-   </ul>
-   <p className='text-[#FFBF00] text-[12px] py-2'>Get a Newsletter from us</p>
-   <div className='w-[95%]'>
-   <div className='flex bg-white rounded-2xl'>
-   <input className='rounded-xl w-full pl-4' placeholder='Enter your email here' />
-   <div className='w-[40%] flex justify-center items-center'><div className='bg-[#FFBF00] w-full justify-center text-center rounded-2xl p-2'>Sign Up</div></div>
-   </div>
-   </div>
-      </div>
-    </div>
-    <div className='bg-red-500'>
-        <div className='bg-white h-[0.5px] w-full flex'></div>
-    </div>
-    <div className='flex justify-between pt-2 px-3'>
-        <h6>Powered by Purpose-Drive Educational Foundation</h6>
+
+      <motion.div 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="my-8"
+      >
+        <div className="h-[1px] bg-gray-400 w-full" />
+      </motion.div>
+
+      <motion.div 
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+        className="flex flex-col md:flex-row justify-between mx-auto max-w-7xl items-center gap-2 text-xs px-2"
+      >
+        <h6>Powered by Purpose-Driven Educational Foundation</h6>
         <h6>Privacy Policy | Terms of Use</h6>
-    </div>
-    </div>
+      </motion.div>
+    </footer>
   )
 }
 
