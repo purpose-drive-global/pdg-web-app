@@ -1,4 +1,5 @@
 import Footer from "./components/footer";
+import Gallery from "./components/Gallery";
 import Header from "./components/Header.jsx"
 import Hero from "./components/Hero"
 import Upcomingevents from "./components/upcomingevents";
@@ -10,6 +11,7 @@ export default function Home() {
       <Header />
       <Hero/>
       <WhoWeAre />
+      <Gallery />
       <Upcomingevents />
       <Footer />
     </section>
