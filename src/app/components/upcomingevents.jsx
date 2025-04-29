@@ -53,7 +53,8 @@ const Upcomingevents = () => {
         }
     ]
   return (
-    <div className='mb-5'>
+    <div className='mb-5 bg-white'>
+    
       <div>
         {/* <img/> */}
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 justify-center items-center p-5'>
@@ -61,9 +62,9 @@ const Upcomingevents = () => {
        events.map((event)=>
         <div key={event.Id} className='flex flex-col justify-end relative '>
         <img src={event.pic} alt={`${event.title} event`} className='mb-72' />
-        <div className='bg-white w-[70%] ml-1 border-[0.5px] absolute drop-shadow-md p-5 pb-7'>
-        <h3 className='text-[28px] font-semibold'>{event.title}</h3>
-            <p className=' font-normal text-[18px] pt-4 pb-6 h-[200]'>{event.desc}</p>
+        <div className='bg-white text-black w-[70%] ml-1 border-[0.5px] absolute drop-shadow-md p-5 pb-7'>
+        <h3 className='text-[28px] font-semibold h-20'>{event.title}</h3>
+            <p className=' font-normal text-[18px] pt-4 pb-6 h-[200px]'>{event.desc}</p>
             <div className='flex text-white'>
             <span className='bg-[#FFBF00] text-[16px] font-medium px-7 py-4 rounded-2xl cursor-pointer flex'>Read More
             <Icon icon="ci:arrow-up-right-sm" width="24" height="24" />

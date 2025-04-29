@@ -9,11 +9,11 @@ const Footer = () => {
         <img src="/assets/pdglogo.png" alt='pdg logo'/>
       </div>
       <div className='w-full md:w-[60%] justify-center'>
-        <h4 className='text-[#FFBF00] font-medium'>Talk to Us</h4>
+        <h4 className='text-[#FFBF00] font-medium pt-3 md:pt-0'>Talk to Us</h4>
         <img src="/assets/talk.png" alt='talk logo' />
       </div>
       <div className='w-full md:w-[60%]'>
-        <h1 className='text-[#FFBF00] font-medium'>Pages</h1>
+        <h1 className='text-[#FFBF00] font-medium pt-3 md:pt-0'>Pages</h1>
         <ul className='flex flex-col gap-4 pt-3'>
             <li className='text-[18px]'><a href="">Home</a></li>
             <li className='text-[18px]'><a href="">About Us</a></li>
@@ -22,7 +22,7 @@ const Footer = () => {
         </ul>
       </div>
       <div className='w-full md:w-[60%]'>
-        <h1 className='text-[#FFBF00] font-medium'>Follow Us</h1>
+        <h1 className='text-[#FFBF00] font-medium pt-3 md:pt-0'>Follow Us</h1>
         <ul className='flex flex-col gap-5 pt-3'>
         <li ><a className='text-[12px] flex gap-1 items-center' href="" target="_blank" rel="noopener noreferrer">
         <span className='rounded-full bg-white p-1'><Icon icon="mage:facebook" width="20" height="20" style={{color: '#FFBF00'}} /></span>@purposedriveglobal</a></li>
@@ -35,7 +35,7 @@ const Footer = () => {
         </ul>
       </div>
       <div className='w-full'>
-      <h1 className='text-[#FFBF00] font-medium'>About Us</h1>
+      <h1 className='text-[#FFBF00] font-medium pt-3 md:pt-0'>About Us</h1>
       <p className='text-[16px] pt-3'>Our Vision Fuels 2030. Our Dreams Build 2050. The journey from 2023 to 2030, is a crucial Launchpad towards the Pan-African leadership that we will fully manifest in 2050.</p>
       <p className='text-[16px] pt-4'>Our Projects and Initiatives are your expedition into a future where impact reverberates across continents. Step onto this road to 2030 with Purpose-Drive Global. Together, we will not only traverse this decade; we’ll build the legacy that defines 2050.</p>
    <ul className='py-2 flex flex-col gap-2'>
