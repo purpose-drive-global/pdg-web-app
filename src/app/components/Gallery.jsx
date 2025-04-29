@@ -59,13 +59,9 @@ export default function Gallery() {
                             <Image
                                 src={src}
                                 alt={`Gallery image ${index + 1}`}
-<Image
-    src={src}
-    alt={`Gallery image ${index + 1}`}
-    width={500}
-    height={350}
-    className="w-full h-auto object-cover"
-/>
+                                width={500}
+                                height={350}
+                                className="w-full h-auto object-cover"
                             />
                         </motion.div>
                     ))}
