@@ -64,7 +64,7 @@ export default function WhoWeAre() {
         <div className="lg:w-1/2">
           <Image
             src='/image.avif'
-            alt='hero-image'
+            alt='Purpose Drive Global team members collaborating'
             width={500}
             height={500}
             className="object-contain w-full h-full"

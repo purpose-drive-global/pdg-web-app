@@ -60,7 +60,7 @@ export default function Gallery() {
                                 src={src}
                                 alt={`Gallery image ${index + 1}`}
                                 width={500}
-                                height={32} 
+                                height={350}
                                 className="w-full h-auto object-cover"
                             />
                         </motion.div>
