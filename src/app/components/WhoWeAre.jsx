@@ -15,7 +15,7 @@ export default function WhoWeAre() {
       <div className="mx-auto max-w-7xl flex flex-col lg:flex-row justify-between w-full gap-[6.25rem] px-8 py-12 r">
         <div className="flex flex-col gap-8 w-full lg:w-1/2">
           <div className="flex flex-col gap-4 relative">
-            <h2 className="text-black font-inter font-semibold text-[3rem] text-center">Who We Are</h2>
+            <h2 className="text-black font-inter font-semibold text-[2.75rem] text-center">Who We Are</h2>
             <motion.div className="w-[12rem] absolute inset-0 top-14 mx-auto"
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}

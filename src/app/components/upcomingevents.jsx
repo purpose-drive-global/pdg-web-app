@@ -70,7 +70,7 @@ const Upcomingevents = () => {
         <div className='mb-5 bg-white'>
             <div className='mx-auto max-w-7xl flex flex-col gap-12 py-12 px-8'>
                 <motion.h2 
-                    className='font-inter text-3xl text-center md:text-left md:text-5xl text-black font-semibold'
+                    className='font-inter text-3xl text-center md:text-left md:text-4xl text-black font-semibold'
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
