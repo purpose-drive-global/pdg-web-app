@@ -5,28 +5,28 @@ import { motion } from 'framer-motion'
 
 export default function Gallery() {
     const images = [
-        '/gallery-image.svg',
-        '/gallery-image2.svg',
-        '/gallery-image3.svg',
-        '/gallery-image4.svg',
-        '/gallery-image5.svg',
-        '/gallery-image6.svg',
-        '/gallery-image7.svg',
-        '/gallery-image8.svg',
-        '/gallery-image9.svg',
-        '/gallery-image10.svg',
-        '/gallery-image11.svg',
+        '/gallery-image.avif',
+        '/gallery-image2.avif',
+        '/gallery-image3.avif',
+        '/gallery-image4.avif',
+        '/gallery-image5.avif',
+        '/gallery-image6.avif',
+        '/gallery-image7.avif',
+        '/gallery-image8.avif',
+        '/gallery-image9.avif',
+        '/gallery-image10.avif',
+        '/gallery-image11.avif',
     ]
 
     return (
         <section
             className="relative inset-0 bg-[#0E0E0D] bg-cover bg-center z-0 py-20"
-            style={{ backgroundImage: `url('/gallery-bg.svg')` }}
+            style={{ backgroundImage: `url('/gallery-bg.avif')` }}
         >
             <div className="mx-auto max-w-7xl px-8">
                 <div className="flex flex-col gap-6 mb-12">
                     <motion.h2
-                        className="text-5xl font-semibold font-inter text-white"
+                        className="text-4xl font-semibold font-inter text-white"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
